@@ -2,26 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi App</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <h1>Mi Aplicación</h1>
+        <h1>Calculadora</h1>
     </header>
 
     <main>
-        <section class="card">
-            <h2>Bienvenido</h2>
-            <p>Esta es una interfaz creada para la actividad de GitHub.</p>
-            <button>Click acá</button>
-        </section>
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">⌫</button>
+                <button onclick="append('/')">÷</button>
+                <button onclick="append('*')">×</button>
+
+                <button onclick="append('7')">7</button>
+                <button onclick="append('8')">8</button>
+                <button onclick="append('9')">9</button>
+                <button onclick="append('-')">-</button>
+
+                <button onclick="append('4')">4</button>
+                <button onclick="append('5')">5</button>
+                <button onclick="append('6')">6</button>
+                <button onclick="append('+')">+</button>
+
+                <button onclick="append('1')">1</button>
+                <button onclick="append('2')">2</button>
+                <button onclick="append('3')">3</button>
+                <button onclick="calculate()">=</button>
+
+                <button onclick="append('0')" class="zero">0</button>
+                <button onclick="append('.')">.</button>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>© 2026 - Trabajo en equipo</p>
+        <p>© 2026 - Calculadora Web</p>
     </footer>
 
+    <script src="app.js"></script>
 </body>
 </html>
